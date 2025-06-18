@@ -16,14 +16,19 @@ function addTask() {
 
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
-  deleteBtn.onclick = function (event) {
-    event.stopPropagation(); // Para di ma-toggle ang 'done' class
+  deleteBtn.onclick = function () {
     li.remove();
+    updateTaskCounter();
   };
 
   li.appendChild(deleteBtn);
-
   document.getElementById("taskList").appendChild(li);
   taskInput.value = "";
+
+  updateTaskCounter();
 }
 
+function updateTaskCounter() {
+  const count = document.querySelectorAll('#taskList li').length;
+  document.getElementById("taskCounter").textContent = `You have ${count} task${count !== 1 ? "s" : ""}`;
+}
