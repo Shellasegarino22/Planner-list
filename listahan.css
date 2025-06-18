@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
   background-image: url('https://www.gardentech.com/-/media/project/oneweb/gardentech/images/blog/how-to-start-a-flower-garden/how-to-start-a-flower-garden-h.jpg');
@@ -9,11 +5,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
-  padding: 20px;
-  min-height: 100vh;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .todo-container {
@@ -22,27 +18,35 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 30px 20px;
+  padding: 30px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  width: 100%;
+  width: 90%;
   max-width: 400px;
   text-align: center;
 }
 
-.input-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.subtitle {
+  font-size: 16px;
+  color: #444;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+#taskCounter {
+  font-size: 14px;
+  color: #666;
   margin-bottom: 20px;
-  justify-content: center;
+}
+
+.input-section {
+  margin-bottom: 20px;
 }
 
 #taskInput {
-  flex: 1 1 200px;
+  width: 70%;
   padding: 10px;
   font-size: 16px;
-  border-radius: 5px;
-  border: none;
 }
 
 button {
@@ -62,17 +66,15 @@ button:hover {
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
 li {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #e9f1ff;
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
   position: relative;
   text-align: left;
-  word-break: break-word;
 }
 
 li.done {
@@ -92,20 +94,3 @@ li button {
   border-radius: 3px;
   cursor: pointer;
 }
-
-/* RESPONSIVE ADJUSTMENTS */
-@media (max-width: 500px) {
-  .todo-container {
-    padding: 20px 15px;
-  }
-
-  #taskInput {
-    width: 100%;
-  }
-
-  button {
-    width: 100%;
-  }
-}
-
-  
